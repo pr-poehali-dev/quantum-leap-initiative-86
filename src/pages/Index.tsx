@@ -59,7 +59,7 @@ export default function LaunchPadPage() {
           </h1>
           <nav className="hidden md:flex space-x-6 text-sm">
             <a href="https://yandex.ru/profile/128335072611?lang=ru" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-secondary transition-colors">Территория</a>
-            <a href="#" className="text-muted-foreground hover:text-secondary transition-colors">Связь</a>
+            <a href="https://janitorai.com/characters/7767d687-f6a6-40ba-8739-fe229b5e9386_character-diavolo-jjba" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-secondary transition-colors">Контакты</a>
           </nav>
         </div>
       </header>
@@ -68,17 +68,17 @@ export default function LaunchPadPage() {
       <main className="flex items-center justify-center min-h-[calc(100vh-200px)] p-4">
         <div className="w-full max-w-md space-y-8">
           <div className="text-center space-y-4">
+            <h2 className="text-4xl font-bold text-foreground leading-tight">
+              Хочешь вступить в{" "}
+              <span className="text-primary">Семью?</span>
+            </h2>
             <a
               href="https://ru.pinterest.com/pin/204562008074719940/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-block"
+              className="text-xs text-secondary/60 hover:text-secondary italic transition-colors"
             >
-              <h2 className="text-4xl font-bold text-foreground leading-tight group-hover:text-primary transition-colors">
-                Хочешь вступить в{" "}
-                <span className="text-primary">Семью?</span>
-              </h2>
-              <p className="text-xs text-secondary/60 mt-1 italic">секретные материалы мафии</p>
+              секретные материалы мафии
             </a>
             <p className="text-base text-muted-foreground italic leading-relaxed">
               «Стая не выбирает вожака. Вожак выбирает стаю.<br />
