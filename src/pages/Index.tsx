@@ -5,8 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Icon from "@/components/ui/icon"
 
-const DIAVOLO_MEME = "https://cdn.poehali.dev/projects/ea6f6db7-6266-4322-89a1-a7ef8f038f91/files/a600dc9f-8517-406b-b03e-c8c15a4bf93e.jpg"
-const DOPPIO_PHOTO = "https://cdn.poehali.dev/files/96423376-abb6-4454-b289-d9dfe2a154cd.png"
+const DOPPIO_PHOTO = "https://cdn.poehali.dev/projects/ea6f6db7-6266-4322-89a1-a7ef8f038f91/bucket/3e343c0d-bc02-4f77-96fa-6de4740da15f.png"
 
 export default function LaunchPadPage() {
   const [email, setEmail] = useState("")
@@ -59,8 +58,7 @@ export default function LaunchPadPage() {
             🌹 Passione
           </h1>
           <nav className="hidden md:flex space-x-6 text-sm">
-            <a href="#" className="text-muted-foreground hover:text-secondary transition-colors">Кодекс</a>
-            <a href="#" className="text-muted-foreground hover:text-secondary transition-colors">Территория</a>
+            <a href="https://yandex.ru/profile/128335072611?lang=ru" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-secondary transition-colors">Территория</a>
             <a href="#" className="text-muted-foreground hover:text-secondary transition-colors">Связь</a>
           </nav>
         </div>
@@ -70,13 +68,21 @@ export default function LaunchPadPage() {
       <main className="flex items-center justify-center min-h-[calc(100vh-200px)] p-4">
         <div className="w-full max-w-md space-y-8">
           <div className="text-center space-y-4">
-            <h2 className="text-4xl font-bold text-foreground leading-tight">
-              Хочешь вступить в{" "}
-              <span className="text-primary">Семью?</span>
-            </h2>
-            <p className="text-lg text-muted-foreground italic">
-              Мы не набираем всех подряд. Только избранных.<br />
-              Оставь заявку — и, возможно, мы позвоним.
+            <a
+              href="https://ru.pinterest.com/pin/204562008074719940/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-block"
+            >
+              <h2 className="text-4xl font-bold text-foreground leading-tight group-hover:text-primary transition-colors">
+                Хочешь вступить в{" "}
+                <span className="text-primary">Семью?</span>
+              </h2>
+              <p className="text-xs text-secondary/60 mt-1 italic">секретные материалы мафии</p>
+            </a>
+            <p className="text-base text-muted-foreground italic leading-relaxed">
+              «Стая не выбирает вожака. Вожак выбирает стаю.<br />
+              Оставьте заявку. Если вы достойны — вы услышите наш звонок.»
             </p>
           </div>
 
@@ -123,15 +129,6 @@ export default function LaunchPadPage() {
               </form>
             </CardContent>
           </Card>
-
-          {/* Diavolo meme banner */}
-          <div className="rounded-lg overflow-hidden border border-primary/20 shadow-[0_0_30px_rgba(150,50,180,0.1)]">
-            <img
-              src={DIAVOLO_MEME}
-              alt="Дьяволо одобряет"
-              className="w-full object-cover max-h-72"
-            />
-          </div>
 
           {/* Employee of the month */}
           <Card className="border border-secondary/40 shadow-[0_0_40px_rgba(180,130,0,0.1)]">
