@@ -180,6 +180,9 @@ export default function LaunchPadPage() {
             <a href="#" className="text-muted-foreground hover:text-secondary transition-colors">
               Условия принятия
             </a>
+            <a href="https://vk.com/idliketodosomethingnice" target="_blank" rel="noopener noreferrer" className="text-muted-foreground/50 hover:text-secondary transition-colors">
+              автор идеи
+            </a>
           </div>
         </div>
       </footer>
