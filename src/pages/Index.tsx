@@ -7,11 +7,19 @@ import Icon from "@/components/ui/icon"
 
 const DOPPIO_PHOTO = "https://cdn.poehali.dev/projects/ea6f6db7-6266-4322-89a1-a7ef8f038f91/bucket/3e343c0d-bc02-4f77-96fa-6de4740da15f.png"
 
+const PARTY_PHOTOS = [
+  "https://cdn.poehali.dev/projects/ea6f6db7-6266-4322-89a1-a7ef8f038f91/bucket/c805a69b-ce65-4f86-8e58-a7f694c4a6c9.png",
+  "https://cdn.poehali.dev/projects/ea6f6db7-6266-4322-89a1-a7ef8f038f91/bucket/79750dee-912f-4055-99c5-b5b2cbb15d9e.png",
+  "https://cdn.poehali.dev/projects/ea6f6db7-6266-4322-89a1-a7ef8f038f91/bucket/b54c9247-1b68-4409-9b78-6da059948ab6.png",
+  "https://cdn.poehali.dev/projects/ea6f6db7-6266-4322-89a1-a7ef8f038f91/bucket/b8b328c1-7c8c-446a-a1da-26704ee04071.png",
+]
+
 export default function LaunchPadPage() {
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const [showParty, setShowParty] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -59,6 +67,7 @@ export default function LaunchPadPage() {
           </h1>
           <nav className="hidden md:flex space-x-6 text-sm">
             <a href="https://yandex.ru/profile/128335072611?lang=ru" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-secondary transition-colors">Территория</a>
+            <button onClick={() => setShowParty(true)} className="text-muted-foreground hover:text-secondary transition-colors cursor-pointer">Наши корпоративы</button>
             <a href="https://janitorai.com/characters/7767d687-f6a6-40ba-8739-fe229b5e9386_character-diavolo-jjba" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-secondary transition-colors">Контакты</a>
           </nav>
         </div>
@@ -186,6 +195,33 @@ export default function LaunchPadPage() {
           </div>
         </div>
       </footer>
+
+      {/* Party modal */}
+      {showParty && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+          onClick={() => setShowParty(false)}
+        >
+          <div
+            className="bg-card border border-primary/30 rounded-xl shadow-2xl w-full max-w-2xl p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-secondary font-bold text-lg tracking-wide">🎉 Наши корпоративы</h3>
+              <button onClick={() => setShowParty(false)} className="text-muted-foreground hover:text-foreground transition-colors">
+                <Icon name="X" size={20} />
+              </button>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              {PARTY_PHOTOS.map((src, i) => (
+                <div key={i} className="aspect-[4/3] overflow-hidden rounded-lg border border-border">
+                  <img src={src} alt={`Корпоратив ${i + 1}`} className="w-full h-full object-cover" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
